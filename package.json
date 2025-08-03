@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
     "preview": "vite preview"
   },
   "devDependencies": {
