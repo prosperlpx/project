@@ -1,5 +1,5 @@
 <script>
-  import { isDarkMode, mainTxtColor } from "../dist/Stores";
+  import { isDarkMode, mainTxtColor } from "../lib/Stores";
   import DisplayProductOne from "./displayAboutProduct/DisplayProductOne.svelte";
   import DisplayProductThree from "./displayAboutProduct/DisplayProductThree.svelte";
   import DisplayProductTwo from "./displayAboutProduct/DisplayProductTwo.svelte";
@@ -14,13 +14,13 @@
     >
       <div class="pt-12 space-y-6">
         <h2 class={`text-center text-5xl sm:text-6xl font-bold text-teal-300`}>
-          About-Us
+          About Us
         </h2>
 
-        <p class={`text-white w-3/4 mx-auto pb-4 text-center`}>
+        <p class={`text-[#f5f5f5] w-3/4 mx-auto pb-4 text-center`}>
           We help bring that project, idea into reality. Walking you through the
-          hastle of designing, development, deployment,SEO and more. Our vision
-          is to build softwares, applications that meets users needs.
+          hastle of designing, development, deployment, SEO, and more. Our
+          vision is to build softwares, applications that meets users needs.
         </p>
 
         <OurTeam />

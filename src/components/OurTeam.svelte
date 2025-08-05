@@ -4,13 +4,13 @@
 </script>
 
 <div class="p-6">
-  <h2 class="text-white font-medium text-center text-3xl sm:text-4xl">
-    Core Team:
+  <h2 class={`font-bold text-center text-3xl sm:text-4xl text-white`}>
+    Core Team
   </h2>
 
-  <ul class="flex items-center gap-10 sm:gap-20 w-fit mx-auto mt-8">
+  <ul class="flex items-center gap-6 sm:gap-12 w-fit mx-auto mt-8">
     <li class="flex flex-col items-center gap-4 text-white text-center">
-      <img src={dog} alt="dog" class="rounded-full w-16 sm:w-20 h-16 sm:h-20" />
+      <img src={dog} alt="dog" class="rounded-full w-12 h-12 sm:w-14 sm:h-14" />
       <p>Lead Designer</p>
     </li>
 
@@ -18,7 +18,7 @@
       <img
         src={light_bulb}
         alt="light_bulb"
-        class="rounded-full w-16 sm:w-20 h-16 sm:h-20"
+        class="rounded-full w-12 h-12 sm:w-14 sm:h-14"
       />
       <p>Lead Developer</p>
     </li>

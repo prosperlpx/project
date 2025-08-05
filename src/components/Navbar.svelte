@@ -1,14 +1,12 @@
 <script>
   import lapxpec_logo from "../assets/lapxpec_logo.png";
-  import { isDarkMode, bgColor } from "../dist/Stores";
+  import { isDarkMode, bgColor, isOpenMenu } from "../lib/Stores";
   import brightness from "../assets/brightness.png";
   import darkness from "../assets/darkMode.svg";
   import MobileNav from "./MobileNav.svelte";
 
-  let isOpenMenu = true;
-
   function changeToggle() {
-    isOpenMenu = !isOpenMenu;
+    isOpenMenu.update((menu) => !menu);
   }
 
   export let toggleMode;
@@ -68,7 +66,7 @@
       </div>
 
       <div>
-        {#if isOpenMenu}
+        {#if $isOpenMenu}
           <button class="text-4xl cursor-pointer" onclick={changeToggle}>
             &#9776;
           </button>

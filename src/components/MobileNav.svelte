@@ -1,5 +1,5 @@
 <script>
-  import { bgColor, mainTxtColor } from "../dist/Stores";
+  import { bgColor, mainTxtColor } from "../lib/Stores";
   import discord from "../assets/discord.png";
 </script>
 

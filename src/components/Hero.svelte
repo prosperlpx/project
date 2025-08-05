@@ -9,8 +9,8 @@
     heroHeadingTxtCol,
     headingTxtLgScreen,
     headingTxtSmScreen,
-    bgColor,
-  } from "../dist/Stores";
+    isOpenMenu,
+  } from "../lib/Stores";
   import { scale } from "svelte/transition";
   export let change;
   export let index;
@@ -49,7 +49,7 @@
   $: initialImg = changeImg[index];
 </script>
 
-<main class="mx-auto max-w-4xl">
+<main class="mx-auto max-w-4xl overflow-hidden">
   <section
     id="home"
     class="mt-16 sm:mt-12 flex scroll-mt-40 flex-col-reverse items-center justify-between gap-12 p-6 sm:flex-row"
@@ -86,11 +86,14 @@
   </section>
 
   <!-- this redirects to our discord server where you attend to clients and give  -->
-  <a href="#redirects to discord">
+
+  {#if $isOpenMenu}
     <img
-      src={discord}
-      alt="discord"
-      class={`fixed w-8 h-8 sm:w-10 sm:h-10 z-10 bg-white p-1 rounded-full top-142 sm:right-4 sm:top-138 lg:right-32 lg:top-130 ml-3 sm:ml-0 cursor-pointer`}
+      src={$isOpenMenu && discord}
+      alt={$isOpenMenu ? "discord" : ""}
+      class={`fixed w-8 h-8 sm:w-10 sm:h-10 z-20 bg-white p-1 rounded-full top-142 sm:right-4 sm:top-138 lg:right-32 lg:top-130 ml-3 sm:ml-0 cursor-pointer`}
     />
-  </a>
+  {:else}
+    {""}
+  {/if}
 </main>
